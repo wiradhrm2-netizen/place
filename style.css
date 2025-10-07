@@ -1,7 +1,6 @@
 /* =========================================
-   🌟 PROFIL CARD STYLE — VERSI UPGRADE 🌟
-   Menggabungkan efek elegan, responsif,
-   dan elemen dekoratif dinamis.
+   🌟 PROFIL CARD STYLE — VERSI SCROLLABLE 🌟
+   Elegan, responsif, dan bisa di-scroll.
    ========================================= */
 
 /* ====== Variabel Warna (Root) ====== */
@@ -19,13 +18,21 @@ body {
   color: var(--utama);
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   animation: fadeInBody 1.2s ease-in-out;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden; /* agar efek cahaya tidak bikin scroll horizontal */
+  overflow-y: auto;   /* biar halaman bisa di-scroll */
+}
+
+/* Container utama untuk isi halaman */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  gap: 40px;
 }
 
 /* Efek cahaya lembut latar belakang */
