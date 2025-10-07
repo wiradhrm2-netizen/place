@@ -1,18 +1,18 @@
 /* ====== Tampilan Umum ====== */
 body {
-  background: linear-gradient(135deg, #FFFFE0, #FFFACD); /* Gradasi kuning lembut */
+  background: linear-gradient(135deg, #fffcc2, #ffe6a7);
   font-family: 'Poppins', Arial, sans-serif;
-  color: #191970; /* Teks biru tua */
+  color: #191970;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  animation: fadeInBody 1s ease-in-out;
+  animation: fadeInBody 1.2s ease-in-out;
 }
 
-/* ====== Animasi Masuk Halus ====== */
+/* Animasi masuk halus */
 @keyframes fadeInBody {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -20,25 +20,45 @@ body {
 
 /* ====== Kartu Profil ====== */
 .kartu-profil {
-  width: 320px;
-  background-color: white;
+  width: 340px;
+  background-color: #fff;
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   text-align: center;
-  padding: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: slideUp 0.8s ease;
+  padding: 30px 25px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: popUp 1s ease-out;
+}
+
+/* Animasi muncul kartu */
+@keyframes popUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Efek cahaya di hover */
+.kartu-profil::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.kartu-profil:hover::before {
+  opacity: 1;
 }
 
 .kartu-profil:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-}
-
-/* ====== Animasi Kartu Masuk ====== */
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(50px); }
-  to { opacity: 1; transform: translateY(0); }
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
 }
 
 /* ====== Foto Profil ====== */
@@ -50,70 +70,104 @@ body {
   border: 4px solid #191970;
   margin-bottom: 15px;
   transition: transform 0.4s ease, box-shadow 0.3s ease;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Animasi foto melayang lembut */
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 .kartu-profil img:hover {
-  transform: scale(1.08) rotate(2deg);
+  transform: scale(1.1);
   box-shadow: 0 0 15px rgba(25, 25, 112, 0.4);
 }
 
 /* ====== Nama dan Deskripsi ====== */
 .kartu-profil h1 {
-  font-size: 1.6em;
+  font-size: 1.8em;
   margin: 10px 0;
   color: #000080;
+  letter-spacing: 1px;
 }
 
 .kartu-profil p {
-  font-size: 0.95em;
+  font-size: 1em;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-/* ====== Link & Tombol ====== */
+/* ====== Tombol & Link ====== */
 .kartu-profil a,
 button {
   display: inline-block;
-  background-color: #191970;
+  background: linear-gradient(135deg, #191970, #0000cd);
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 10px 22px;
+  border-radius: 12px;
   margin-top: 15px;
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(25, 25, 112, 0.3);
 }
 
 .kartu-profil a:hover,
 button:hover {
-  background-color: #00008B;
-  transform: scale(1.08);
-  box-shadow: 0 4px 10px rgba(0, 0, 128, 0.4);
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 128, 0.5);
+}
+
+/* Tombol "Sapa Saya!" animasi berdenyut */
+#sapaButton {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(25, 25, 112, 0.5); }
+  50% { transform: scale(1.05); box-shadow: 0 0 10px rgba(25, 25, 112, 0.4); }
 }
 
 /* ====== Bagian Fakta Lucu ====== */
 .kelucuan {
-  background-color: #f9f9ff;
+  background-color: #f7f8ff;
   border-radius: 15px;
-  padding: 15px;
-  margin-top: 20px;
+  padding: 18px;
+  margin-top: 25px;
   text-align: left;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
-  animation: fadeInBody 1s ease-in-out 0.3s both;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  animation: fadeIn 1.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .kelucuan h2 {
   font-size: 1.1em;
   color: #00008B;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.kelucuan ul {
+  padding-left: 20px;
 }
 
 .kelucuan li {
   margin-bottom: 8px;
-  line-height: 1.4;
+  line-height: 1.5;
   list-style-type: "🌟 ";
+  transition: transform 0.2s ease;
+}
+
+.kelucuan li:hover {
+  transform: translateX(5px);
 }
 
 /* ====== Responsif (HP) ====== */
@@ -126,5 +180,9 @@ button:hover {
   .kartu-profil img {
     width: 100px;
     height: 100px;
+  }
+
+  .kartu-profil h1 {
+    font-size: 1.5em;
   }
 }
