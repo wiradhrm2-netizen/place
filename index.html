@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Profil Saya -dharma</title>
+    <title>Profil Saya - Dharma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="kartu-profil">
         <img src="foto-profil.jpg" alt="Foto profil saya">
-        <h1>dharma rorr</h1>
+        <h1>Dharma Rorr</h1>
         <p>Siswa SMA yang tertarik dengan teknologi dan desain. Selamat datang di website pertama saya!</p>
-        <a href="https://www.instagram.com/dhrmmaa__">Kunjungi Instagram Saya</a>
-        <br>
+
+        <a href="https://www.instagram.com/dhrmmaa__" target="_blank">Kunjungi Instagram Saya</a>
+        <br><br>
+
         <button id="sapaButton">Sapa Saya!</button>
+
+        <div class="kelucuan">
+            <h2>Fakta Lucu Tentang Saya 😆</h2>
+            <ul>
+                <li>Sering bilang “sebentar lagi tidur”... tapi masih scroll TikTok 2 jam kemudian.</li>
+                <li>Pernah buka Visual Studio Code cuma buat kelihatan produktif.</li>
+                <li>Ngoding pakai kopi, tapi error-nya malah tambah banyak ☕💻.</li>
+                <li>Senyum ke kamera 3 kali baru dapet foto yang “oke dikit”. 📸</li>
+            </ul>
+        </div>
+
+        <div class="doraemon">
+            <h2>Doraemon yang Cute 💙</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/bd/Doraemon_character.png" 
+                 alt="Doraemon yang cute" width="200">
+            <p>Doraemon selalu siap membantu dengan kantong ajaibnya!  
+            Katanya, kalau kamu tersenyum hari ini, Doraemon bakal kasih bonus kebahagiaan 100%! ✨</p>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("sapaButton").addEventListener("click", function() {
+            alert("Halo! Terima kasih sudah mampir 😎 Semoga harimu sebug kode yang clean!");
+        });
+    </script>
+
 </body>
 </html>
 
