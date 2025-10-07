@@ -1,15 +1,130 @@
+/* ====== Tampilan Umum ====== */
 body {
-  background-color: #FFFFE0; /* Warna kuning cerah */
-  font-family: Arial, sans-serif; /* Jenis huruf yang bersih dan mudah dibaca */
-  color: #191970; /* Warna teks utama (Biru gelap) */
+  background: linear-gradient(135deg, #FFFFE0, #FFFACD); /* Gradasi kuning lembut */
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #191970; /* Teks biru tua */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeInBody 1s ease-in-out;
 }
 
+/* ====== Animasi Masuk Halus ====== */
+@keyframes fadeInBody {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== Kartu Profil ====== */
 .kartu-profil {
-  width: 300px;
-  margin: 50px auto; /* 50px jarak atas/bawah, auto menengahkan kiri/kanan */
-  padding: 20px;
-  background-color: white; /* ✅ Diperbaiki dari "colour" ke "color" */
-  border-radius: 15px; /* Membuat sudut menjadi melengkung */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ✅ Diperbaiki: angka alpha jadi 0.1, bukan 0,1 atau 0,1,1 */
-  text-align: center; /* Menengahkan semua teks di dalam kartu */
+  width: 320px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 0.8s ease;
+}
+
+.kartu-profil:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ====== Animasi Kartu Masuk ====== */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== Foto Profil ====== */
+.kartu-profil img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #191970;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.kartu-profil img:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 0 15px rgba(25, 25, 112, 0.4);
+}
+
+/* ====== Nama dan Deskripsi ====== */
+.kartu-profil h1 {
+  font-size: 1.6em;
+  margin: 10px 0;
+  color: #000080;
+}
+
+.kartu-profil p {
+  font-size: 0.95em;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* ====== Link & Tombol ====== */
+.kartu-profil a,
+button {
+  display: inline-block;
+  background-color: #191970;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kartu-profil a:hover,
+button:hover {
+  background-color: #00008B;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 128, 0.4);
+}
+
+/* ====== Bagian Fakta Lucu ====== */
+.kelucuan {
+  background-color: #f9f9ff;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: left;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  animation: fadeInBody 1s ease-in-out 0.3s both;
+}
+
+.kelucuan h2 {
+  font-size: 1.1em;
+  color: #00008B;
+  margin-bottom: 10px;
+}
+
+.kelucuan li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  list-style-type: "🌟 ";
+}
+
+/* ====== Responsif (HP) ====== */
+@media (max-width: 480px) {
+  .kartu-profil {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .kartu-profil img {
+    width: 100px;
+    height: 100px;
+  }
 }
