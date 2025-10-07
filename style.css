@@ -1,76 +1,15 @@
-/* =========================================
-   🌟 PROFIL CARD STYLE — VERSI SCROLLABLE 🌟
-   Elegan, responsif, dan bisa di-scroll.
-   ========================================= */
-
-/* ====== Variabel Warna (Root) ====== */
-:root {
-  --utama: #191970;
-  --sekunder: #0000cd;
-  --latar: #fffcc2;
-  --teks: #333;
-}
-
 /* ====== Tampilan Umum ====== */
 body {
-  background: linear-gradient(135deg, var(--latar), #ffe6a7);
+  background: linear-gradient(135deg, #fffcc2, #ffe6a7);
   font-family: 'Poppins', Arial, sans-serif;
-  color: var(--utama);
+  color: #191970;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  animation: fadeInBody 1.2s ease-in-out;
-  position: relative;
-  overflow-x: hidden; /* agar efek cahaya tidak bikin scroll horizontal */
-  overflow-y: auto;   /* biar halaman bisa di-scroll */
-}
-
-/* Container utama untuk isi halaman */
-.container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
-  gap: 40px;
-}
-
-/* Efek cahaya lembut latar belakang */
-body::after {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
-  top: 15%;
-  left: 10%;
-  filter: blur(60px);
-  z-index: -1;
-  animation: moveLight 8s ease-in-out infinite alternate;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(255,230,167,0.4) 0%, transparent 70%);
-  bottom: 10%;
-  right: 15%;
-  filter: blur(70px);
-  z-index: -1;
-  animation: moveLight2 9s ease-in-out infinite alternate;
-}
-
-/* Animasi latar bergerak lembut */
-@keyframes moveLight {
-  from { transform: translateY(0) translateX(0); }
-  to { transform: translateY(20px) translateX(30px); }
-}
-
-@keyframes moveLight2 {
-  from { transform: translateY(0) translateX(0); }
-  to { transform: translateY(-25px) translateX(-30px); }
+  min-height: 100vh;
+  animation: fadeInBody 1.2s ease-in-out;
 }
 
 /* Animasi masuk halus */
@@ -128,7 +67,7 @@ body::before {
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--utama);
+  border: 4px solid #191970;
   margin-bottom: 15px;
   transition: transform 0.4s ease, box-shadow 0.3s ease;
   animation: floatImage 4s ease-in-out infinite;
@@ -151,44 +90,20 @@ body::before {
   margin: 10px 0;
   color: #000080;
   letter-spacing: 1px;
-  text-shadow: 0 0 8px rgba(0,0,128,0.2);
 }
 
 .kartu-profil p {
   font-size: 1em;
-  color: var(--teks);
+  color: #333;
   line-height: 1.6;
   margin-bottom: 20px;
-}
-
-/* ====== Badge Status ====== */
-.badge-status {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--utama), var(--sekunder));
-  color: white;
-  font-size: 0.85em;
-  padding: 6px 12px;
-  border-radius: 20px;
-  margin-top: 5px;
-  box-shadow: 0 4px 10px rgba(25,25,112,0.3);
-  animation: fadeIn 1.5s ease;
-}
-
-/* ====== Separator Estetik ====== */
-.separator {
-  border: none;
-  height: 2px;
-  width: 70%;
-  background: linear-gradient(90deg, transparent, var(--utama), transparent);
-  margin: 25px auto;
-  opacity: 0.6;
 }
 
 /* ====== Tombol & Link ====== */
 .kartu-profil a,
 button {
   display: inline-block;
-  background: linear-gradient(135deg, var(--utama), var(--sekunder));
+  background: linear-gradient(135deg, #191970, #0000cd);
   color: white;
   text-decoration: none;
   padding: 10px 22px;
@@ -215,23 +130,6 @@ button:hover {
 @keyframes pulse {
   0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(25, 25, 112, 0.5); }
   50% { transform: scale(1.05); box-shadow: 0 0 10px rgba(25, 25, 112, 0.4); }
-}
-
-/* ====== Ikon Media Sosial ====== */
-.social-icons {
-  margin-top: 15px;
-}
-
-.social-icons a {
-  font-size: 1.4em;
-  margin: 0 8px;
-  color: var(--utama);
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2) rotate(8deg);
-  color: var(--sekunder);
 }
 
 /* ====== Bagian Fakta Lucu ====== */
@@ -276,9 +174,6 @@ button:hover {
 .skill-section {
   margin-top: 35px;
   animation: fadeInSkillSection 1.5s ease-in-out;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @keyframes fadeInSkillSection {
@@ -328,7 +223,7 @@ button:hover {
 
 /* Judul tabel (caption) */
 .skill-table caption {
-  background: linear-gradient(135deg, var(--utama), var(--sekunder));
+  background: linear-gradient(135deg, #191970, #0000cd);
   color: white;
   font-weight: bold;
   padding: 10px;
@@ -344,7 +239,7 @@ button:hover {
 .skill-table th {
   text-align: left;
   padding: 10px 12px;
-  color: var(--utama);
+  color: #191970;
   font-weight: 600;
   border-bottom: 2px solid rgba(25, 25, 112, 0.1);
 }
@@ -353,7 +248,7 @@ button:hover {
 .skill-table td {
   padding: 10px 12px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  color: var(--teks);
+  color: #333;
   transition: all 0.3s ease;
 }
 
