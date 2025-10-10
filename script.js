@@ -11,10 +11,10 @@ tombolSapa.addEventListener('click', function() {
 
   const pesan = [
     'Nice to meet you brok 😎',
-    'Halo juga, legend HTML 💻',
-    'Selamat datang di profil kece ini ✨',
-    'Kamu keren juga mampir ke sini 😁',
-    'Semoga harimu seindah animasi CSS ini 💫'
+    'Hola woe warga samas💻',
+    'Sowon sowon✨',
+    'gabut mestine iki😁',
+    'Gelemen mbukak profil e gajelas💫'
   ];
 
   const randomPesan = pesan[Math.floor(Math.random() * pesan.length)];
