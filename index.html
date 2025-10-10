@@ -1,57 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Profil Saya - Dharma</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Saya - Dharma</title>
+
+  <!-- Hubungkan ke file CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="kartu-profil">
-        <img src="foto-profil.jpg" alt="Foto profil saya">
-        <h1>Dharma Rorr</h1>
-        <p>Siswa SMA yang tertarik dengan teknologi dan desain. Selamat datang di website pertama saya!</p>
+  <div class="kartu-profil">
+    <img src="foto-profil.jpg" alt="Foto profil saya">
+    <h1>Dharma Rorr</h1>
+    <p>Siswa SMA yang tertarik dengan teknologi dan desain. Selamat datang di website pertama saya!</p>
 
-        <a href="https://www.instagram.com/dhrmmaa__" target="_blank">Kunjungi Instagram Saya</a>
-        <br><br>
+    <!-- Tombol Instagram -->
+    <a href="#" class="btn-link">🌐 Kunjungi Instagram Saya</a>
+    <br><br>
 
-        <button id="sapaButton">Sapa Saya!</button>
+    <!-- Tombol Sapa -->
+    <button id="sapaButton">Sapa Saya!</button>
 
-        <div class="kelucuan">
-            <h2>Fun Fact</h2>
-            <ul>
-                <li>Sering bilang “sebentar lagi tidur”... tapi masih scroll TikTok 2 jam kemudian.</li>
-                <li>Sering menunda-nunda tugas.</li>
-                <li>Masih jarang menggunakan porogapit.</li>
-                <li>Suka Indomie dan MBG.</li>
-            </ul>
-        </div>
-
-        <div class="skill-container">
-            <div class="skill-box soft-skill">
-                <h3>Soft Skills 🧠</h3>
-                <ul>
-                    <li>Kreatif dan mudah beradaptasi</li>
-                    <li>Kerja tim yang baik</li>
-                    <li>Komunikatif</li>
-                    <li>Manajemen waktu</li>
-                </ul>
-            </div>
-
-            <div class="skill-box hard-skill">
-                <h3>Hard Skills 💻</h3>
-                <ul>
-                    <li> Bahasa Inggris</li>
-                </ul>
-            </div>
-        </div>
+    <!-- Bagian Fun Fact -->
+    <div class="kelucuan">
+      <h2>Fun Fact</h2>
+      <ul>
+        <li>Sering bilang “sebentar lagi tidur”... tapi masih scroll TikTok 2 jam kemudian.</li>
+        <li>Sering menunda-nunda tugas.</li>
+        <li>Masih jarang menggunakan porogapit.</li>
+        <li>Suka Indomie dan MBG.</li>
+      </ul>
     </div>
 
-    <script>
-        document.getElementById("sapaButton").addEventListener("click", function() {
-            alert("Thank you brok, udah mau lihat profil gajelas 😎");
-        });
-    </script>
+    <!-- Bagian Skill -->
+    <div class="skill-container">
+      <div class="skill-box soft-skill">
+        <h3>Soft Skills 🧠</h3>
+        <ul>
+          <li>Kreatif dan mudah beradaptasi</li>
+          <li>Kerja tim yang baik</li>
+          <li>Komunikatif</li>
+          <li>Manajemen waktu</li>
+        </ul>
+      </div>
+
+      <div class="skill-box hard-skill">
+        <h3>Hard Skills 💻</h3>
+        <ul>
+          <li>Bahasa Inggris</li>
+          <li>Editing Foto</li>
+          <li>Dasar HTML & CSS</li>
+          <li>UI/UX Dasar</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tambahan -->
+    <div class="extra">
+      <h2>🎵 Hobi & Favorit</h2>
+      <p>🎧 Musik: Lofi & Chill</p>
+      <p>🎮 Game: Genshin Impact & Valorant</p>
+      <p>🍜 Makanan: Indomie Rebus + Telur</p>
+      <p>📺 Kartun: Doraemon (yang cute banget 🐱‍👓)</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Dharma Rorr. Dibuat dengan 💙 dan banyak kopi ☕</p>
+  </footer>
+
+  <!-- Hubungkan ke file JS -->
+  <script src="script.js"></script>
 
 </body>
 </html>
